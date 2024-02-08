@@ -12,9 +12,9 @@ from selenium.common import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 def genera_video():
     slp=randint(60,300)
-    options = Options()
-    options.add_argument('--headless=new')
-    driver = webdriver.Chrome(options=options)
+    #options = Options()
+    #options.add_argument('--headless=new')
+    driver = webdriver.Chrome()
     driver.get("https://www.croxyproxy.com/_fr/social")
     youtube = ["https://www.youtube.com/watch?v=5gzA2SR_9Mk", "https://www.youtube.com/watch?v=5gzA2SR_9Mk", 
                "https://www.youtube.com/watch?v=5gzA2SR_9Mk","https://www.youtube.com/watch?v=ntC2F4Vf2FI",
@@ -56,11 +56,11 @@ def genera_video():
         
 def auto_video():
     threads = list()
-    for i in range(50):
+    for i in range(3):
         x=threading.Thread(target=genera_video)
         threads.append(x)
         x.start()
-        sleep(randint(1,5))
+        sleep(randint(0,3))
         
     for th in threads:
         th.join()
