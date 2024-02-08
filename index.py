@@ -14,7 +14,7 @@ def genera_video():
     slp=randint(60,300)
     options = Options()
     options.add_argument('--headless=new')
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=options)
     driver.get("https://www.croxyproxy.com/_fr/social")
     youtube = ["https://www.youtube.com/watch?v=5gzA2SR_9Mk", "https://www.youtube.com/watch?v=5gzA2SR_9Mk", 
                "https://www.youtube.com/watch?v=5gzA2SR_9Mk","https://www.youtube.com/watch?v=ntC2F4Vf2FI",
